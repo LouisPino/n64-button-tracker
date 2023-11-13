@@ -22,15 +22,16 @@ aCount = 0
 bCount = 0
 aDown = False
 bDown = False
+aTimes = []
+bTimes = []
 prevAcount = -1
 prevBcount = -1
 while True:
     r=ctlr.read(eaddr, 32, 32)
-    print(r)
     if r[5]== 47 and aDown==False:
         aCount+=1
         aDown=True
-        print(f"A #{aCount} pressed at {time.time()- start_time}")
+        aTimes.append(round(time.time()-start_time,2))
     if r[5]==15:
         aDown = False
         bDown = False
@@ -41,6 +42,7 @@ while True:
     if r[5]== 79 and bDown==False:
         bCount+=1
         bDown = True
+        bTimes.append(round(time.time()-start_time, 2))
         
     if bCount != prevBcount:  
         prevBcount = bCount
@@ -50,7 +52,8 @@ while True:
     
     time.sleep(.01)
 
-print(f"A: {aCount}\nB: {bCount}")
+print(f"A pressed {aCount} times at {aTimes} seconds")
+print(f"B pressed {bCount} times at {bTimes} seconds")
     
 # [1]- up(32) and down(224) C
 # [2]- left(224) and right(32) C
