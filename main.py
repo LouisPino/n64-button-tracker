@@ -1,6 +1,7 @@
 import usb.core
 import usb.util
 import time
+import pyautogui
 
 
 start_time = time.time()
@@ -11,10 +12,10 @@ if ctlr is None:
 ep=ctlr[0].interfaces()[0].endpoints()[0]
 i=ctlr[0].interfaces()[0].bInterfaceNumber
 
-# ctlr.reset()
+ctlr.reset()
 
-# if ctlr.is_kernel_driver_active(i):
-#     ctlr.detach_kernel_driver(i)
+if ctlr.is_kernel_driver_active(i):
+    ctlr.detach_kernel_driver(i)
     
 ctlr.set_configuration()
 eaddr=ep.bEndpointAddress
@@ -27,9 +28,10 @@ b_times = []
 prev_a_count = -1
 prev_b_count = -1
 while True:
-    r=ctlr.read(eaddr, 32, 32)
+    r=ctlr.read(eaddr, 8, 16)
     if r[5]== 47 and a_down==False:
         a_count+=1
+        pyautogui.press('a')
         a_down=True
         a_times.append(round(time.time()-start_time,2))
     if r[5]==15:
@@ -65,4 +67,5 @@ print(f"B pressed {b_count} times at {b_times} seconds")
 
 
 # decide a clean way to scale controller before more inputs
-# find a way to connect to emulator and python
+# find a way to connect to emulator and python, can't do that reguary. Can maybe do it with fake keystrokes but that's not working in ga,e, only on controller set screen
+# works with sixtyforce
