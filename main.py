@@ -19,6 +19,9 @@ if ctlr.is_kernel_driver_active(i):
     
 ctlr.set_configuration()
 eaddr=ep.bEndpointAddress
+
+
+
 a_count = 0
 b_count = 0
 a_down = False
@@ -27,29 +30,35 @@ a_times = []
 b_times = []
 prev_a_count = -1
 prev_b_count = -1
+
+
 while True:
-    r=ctlr.read(eaddr, 8, 16)
+    r=ctlr.read(eaddr, 16, 16)
+    print(r[5])
     if r[5]== 47 and a_down==False:
         a_count+=1
-        pyautogui.press('a')
         a_down=True
         a_times.append(round(time.time()-start_time,2))
+        pyautogui.press('a')
+        
     if r[5]==15:
         a_down = False
         b_down = False
         
-    if a_count != prev_a_count:  
-        prev_a_count = a_count
+    # if a_count != prev_a_count:  
+    #     prev_a_count = a_count
         
     if r[5]== 79 and b_down==False:
         b_count+=1
         b_down = True
         b_times.append(round(time.time()-start_time, 2))
+        pyautogui.press('b')
         
     if b_count != prev_b_count:  
         prev_b_count = b_count
         
     if r[6] == 32:
+        pyautogui.press('enter')
         break
     
     time.sleep(.01)
