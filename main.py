@@ -18,42 +18,42 @@ if ctlr.is_kernel_driver_active(i):
     
 ctlr.set_configuration()
 eaddr=ep.bEndpointAddress
-aCount = 0
-bCount = 0
-aDown = False
-bDown = False
-aTimes = []
-bTimes = []
-prevAcount = -1
-prevBcount = -1
+a_count = 0
+b_count = 0
+a_down = False
+b_down = False
+a_times = []
+b_times = []
+prev_a_count = -1
+prev_b_count = -1
 while True:
     r=ctlr.read(eaddr, 32, 32)
     if r[5]== 47 and aDown==False:
-        aCount+=1
-        aDown=True
-        aTimes.append(round(time.time()-start_time,2))
+        a_count+=1
+        a_down=True
+        a_times.append(round(time.time()-start_time,2))
     if r[5]==15:
-        aDown = False
-        bDown = False
+        a_down = False
+        b_down = False
         
-    if aCount != prevAcount:  
-        prevAcount = aCount
+    if a_count != prev_a_count:  
+        prev_a_count = a_count
         
     if r[5]== 79 and bDown==False:
-        bCount+=1
-        bDown = True
-        bTimes.append(round(time.time()-start_time, 2))
+        b_count+=1
+        b_down = True
+        b_times.append(round(time.time()-start_time, 2))
         
-    if bCount != prevBcount:  
-        prevBcount = bCount
+    if b_count != prev_b_count:  
+        prev_b_count = b_count
         
     if r[6] == 32:
         break
     
     time.sleep(.01)
 
-print(f"A pressed {aCount} times at {aTimes} seconds")
-print(f"B pressed {bCount} times at {bTimes} seconds")
+print(f"A pressed {a_count} times at {a_times} seconds")
+print(f"B pressed {b_count} times at {b_times} seconds")
     
 # [1]- up(32) and down(224) C
 # [2]- left(224) and right(32) C
