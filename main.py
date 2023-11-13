@@ -11,10 +11,10 @@ if ctlr is None:
 ep=ctlr[0].interfaces()[0].endpoints()[0]
 i=ctlr[0].interfaces()[0].bInterfaceNumber
 
-ctlr.reset()
+# ctlr.reset()
 
-if ctlr.is_kernel_driver_active(i):
-    ctlr.detach_kernel_driver(i)
+# if ctlr.is_kernel_driver_active(i):
+#     ctlr.detach_kernel_driver(i)
     
 ctlr.set_configuration()
 eaddr=ep.bEndpointAddress
@@ -65,3 +65,4 @@ print(f"B pressed {b_count} times at {b_times} seconds")
 
 
 # decide a clean way to scale controller before more inputs
+# find a way to connect to emulator and python
