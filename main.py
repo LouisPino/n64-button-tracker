@@ -39,7 +39,7 @@ while True:
     if a_count != prev_a_count:  
         prev_a_count = a_count
         
-    if r[5]== 79 and bDown==False:
+    if r[5]== 79 and b_down==False:
         b_count+=1
         b_down = True
         b_times.append(round(time.time()-start_time, 2))
