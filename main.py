@@ -55,11 +55,11 @@ while True:
 print(f"A pressed {a_count} times at {a_times} seconds")
 print(f"B pressed {b_count} times at {b_times} seconds")
     
-# [1]- up(32) and down(224) C
-# [2]- left(224) and right(32) C
+# 1 - up(32) and down(224) C
+# 2 - left(224) and right(32) C
 # 3 - LR analog (0-255)
 # 4 - UD analog (0-255)
-# 5 - dpad(0-7){+32 when a held, +64 when b held, =96 when both held} + a(47) + b(79)  {111 a and b together}
+# 5 - dpad(0-7){+32 when a held, +64 when b held, = 96 when both held} + a(47) + b(79)  {111 a and b together}
 # 6 - z(16) + L(4) + r(8) + start(32) {numbers add when held together}
 
 
