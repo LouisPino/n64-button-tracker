@@ -67,5 +67,3 @@ print(f"B pressed {b_count} times at {b_times} seconds")
 
 
 # decide a clean way to scale controller before more inputs
-# find a way to connect to emulator and python, can't do that reguary. Can maybe do it with fake keystrokes but that's not working in ga,e, only on controller set screen
-# works with sixtyforce
