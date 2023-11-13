@@ -28,7 +28,7 @@ prev_a_count = -1
 prev_b_count = -1
 while True:
     r=ctlr.read(eaddr, 32, 32)
-    if r[5]== 47 and aDown==False:
+    if r[5]== 47 and a_down==False:
         a_count+=1
         a_down=True
         a_times.append(round(time.time()-start_time,2))
