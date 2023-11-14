@@ -1,5 +1,6 @@
 import usb.core
 import usb.util
+import sys
 import time
 import datetime
 # import pyautogui
@@ -29,7 +30,12 @@ start_time = time.time()
     
 # ctlr.set_configuration()
 # eaddr=ep.bEndpointAddress
+def readCSV(path):
+    print("here is your csv: "+ path)
 
+if __name__ == "__main__" and sys.argv[1] == "read":
+    csv_location = sys.argv[2]
+    readCSV(csv_location)
 
 
 a_down = False
