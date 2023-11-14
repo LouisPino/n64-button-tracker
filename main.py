@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 data_list = []
 
 # Assign a numeric value to each button
-button_mapping = {'A': 1, 'B': 2, 'Start': 3}  # continue for all buttons
+button_mapping = {'A': 1, 'B': 2, 'Start': 3}
 
 
 start_time = time.time()
@@ -37,13 +37,11 @@ a_down = False
 b_down = False
 a_times = []
 b_times = []
-prev_a_count = -1
-prev_b_count = -1
 
 
 while True:
-    r=ctlr.read(eaddr, 16, 16)
-    print(r[5])
+    r=ctlr.read(eaddr, 16, 16)[:7]
+    print(r)
     if r[5]== 47 and a_down==False:
         a_count+=1
         a_down=True
@@ -60,9 +58,6 @@ while True:
         b_down = True
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'B'})
         # pyautogui.press('b')
-        
-    if b_count != prev_b_count:  
-        prev_b_count = b_count
 
     
         
@@ -70,7 +65,7 @@ while True:
         # pyautogui.press('enter')
         break
     
-    time.sleep(.01)
+    time.sleep(.1)
 
 data= pd.DataFrame(data_list)
 data['ButtonValue'] = data['button'].map(button_mapping)
@@ -85,22 +80,16 @@ colors = {
 }
 
 # Create a scatter plot
-plt.scatter(data['timestamp'], data['ButtonValue'], c=data['ButtonValue'].map(colors))
+plt.scatter(data['timestamp'], data['ButtonValue'], c=data['ButtonValue'].map(colors), s=10)
 
-# Add labels and a legend
 plt.xlabel('Time')
-plt.ylabel('Button Pressed')
 plt.yticks([1, 2, 3],["A","B","Start"])
 plt.title(f"{character} vs. {opponent} Buttons Pressed")
 plt.legend()
-# Show the plot
-
 
 csv_file_path= f"./storedgames/{character}/{datetime.datetime.now()}"
 data.to_csv(csv_file_path, index=False)
 plt.show()
-# print(f"A pressed {a_count} times at {a_times} seconds")
-# print(f"B pressed {b_count} times at {b_times} seconds")
     
 # 1 - up(32) and down(224) C
 # 2 - left(224) and right(32) C
