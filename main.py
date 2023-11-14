@@ -1,6 +1,7 @@
 import usb.core
 import usb.util
 import time
+import datetime
 import pyautogui
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -49,16 +50,13 @@ while True:
     if r[5]== 47 and a_down==False:
         a_count+=1
         a_down=True
-        # a_times.append(round(time.time()-start_time,2))
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'A'})
         pyautogui.press('a')
         
     if r[5]==15:
         a_down = False
         b_down = False
-        
-    # if a_count != prev_a_count:  
-    #     prev_a_count = a_count
+
         
     if r[5]== 79 and b_down==False:
         b_count+=1
@@ -89,6 +87,11 @@ plt.ylabel('Button Pressed')
 plt.title('N64 Button Presses Over Time')
 plt.legend()
 # Show the plot
+
+
+character = "Samus"
+csv_file_path= f"./storedgames/{character}/{datetime.datetime.now()}"
+data.to_csv(csv_file_path, index=False)
 plt.show()
 # print(f"A pressed {a_count} times at {a_times} seconds")
 # print(f"B pressed {b_count} times at {b_times} seconds")
