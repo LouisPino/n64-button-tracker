@@ -2,7 +2,7 @@ import usb.core
 import usb.util
 import time
 import datetime
-# import pyautogui
+import pyautogui
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 data_list = []
 
 # Assign a numeric value to each button
-button_mapping = {'A': 1, 'B': 2, 'Start': 3}
+button_mapping = {'A': 1, 'B': 2, 'Start': 3, "An_L": 4, "An_R": 5, "An_U": 6, "An_D": 7}
 
 
 start_time = time.time()
@@ -31,22 +31,24 @@ eaddr=ep.bEndpointAddress
 
 
 
-a_count = 0
-b_count = 0
 a_down = False
 b_down = False
-a_times = []
-b_times = []
+analog_up_down = False
+analog_down_down = False
+analog_left_down = False
+analog_right_down = False
+r_down = False
+l_down = False
+z_down = False
+
 
 
 while True:
-    r=ctlr.read(eaddr, 16, 16)[:7]
-    print(r)
+    r=ctlr.read(eaddr, 32, 32)
     if r[5]== 47 and a_down==False:
-        a_count+=1
         a_down=True
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'A'})
-        # pyautogui.press('a')
+        pyautogui.press('a')
         
     if r[5]==15:
         a_down = False
@@ -54,15 +56,42 @@ while True:
 
         
     if r[5]== 79 and b_down==False:
-        b_count+=1
         b_down = True
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'B'})
-        # pyautogui.press('b')
+        pyautogui.press('b')
 
+    if r[4]==0 and analog_up_down == False:
+        analog_up_down = True
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'An_U'})
+        pyautogui.press('up')
+        
+    if r[4]==255 and analog_down_down == False:
+        analog_down_down = True
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'An_D'})
+        pyautogui.press('down')
     
+    if r[4] != 255 and r[4] != 0:
+        analog_down_down = False
+        analog_up_down = False
+
+    if r[3]== 0 and analog_left_down == False:
+        analog_left_down = True
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'An_L'})
+        pyautogui.press('left')
+        
+    if r[3]==255 and analog_right_down == False:
+        analog_right_down = True
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'An_R'})
+        pyautogui.press('right')
+    
+    if r[3] != 255 and r[4] != 0:
+        analog_left_down = False
+        analog_right_down = False
+        
+        
         
     if r[6] == 32:
-        # pyautogui.press('enter')
+        pyautogui.press('enter')
         break
     
     time.sleep(.1)
@@ -76,14 +105,32 @@ opponent = "Pikachu"
 colors = {
     1: 'blue',  # A button is blue
     2: 'green', # B button is green
-    3: 'red'    # Start button is red
+    3: 'red' ,   # Start button is red
+    4: 'gray' ,   # Start button is red
+    5: 'gray' ,   # Start button is red
+    6: 'gray',    # Start button is red
+    7: 'gray'    # Start button is red
+}
+shapes = {
+    1: '.',  # A button is blue
+    2: '.', # B button is green
+    3: '.' ,   # Start button is red
+    4: '<' ,   # Start button is red
+    5: '>' ,   # Start button is red
+    6: '^',    # Start button is red
+    7: 'v'    # Start button is red
 }
 
 # Create a scatter plot
-plt.scatter(data['timestamp'], data['ButtonValue'], c=data['ButtonValue'].map(colors), s=10)
+# plt.scatter(data['timestamp'], data['ButtonValue'], c=data['ButtonValue'].map(colors), s=10, marker=data['ButtonValue'].map(shapes))
+
+for button_value, marker in shapes.items():
+    subset_data = data[data['ButtonValue'] == button_value]
+    plt.scatter(subset_data['timestamp'], subset_data['ButtonValue'], c=colors[button_value], s=10, marker=marker, label=f'Button {button_value}')
+
 
 plt.xlabel('Time')
-plt.yticks([1, 2, 3],["A","B","Start"])
+plt.yticks([1, 2, 3, 4, 5, 6, 7],["A","B","Start", "An_L", "An_R", "An_U", "An_D"])
 plt.title(f"{character} vs. {opponent} Buttons Pressed")
 plt.legend()
 
