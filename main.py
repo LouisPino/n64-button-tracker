@@ -2,7 +2,7 @@ import usb.core
 import usb.util
 import time
 import datetime
-import pyautogui
+# import pyautogui
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -11,9 +11,6 @@ data_list = []
 
 # Assign a numeric value to each button
 button_mapping = {'A': 1, 'B': 2, 'Start': 3}  # continue for all buttons
-
-
-
 
 
 start_time = time.time()
@@ -51,7 +48,7 @@ while True:
         a_count+=1
         a_down=True
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'A'})
-        pyautogui.press('a')
+        # pyautogui.press('a')
         
     if r[5]==15:
         a_down = False
@@ -62,7 +59,7 @@ while True:
         b_count+=1
         b_down = True
         data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'B'})
-        pyautogui.press('b')
+        # pyautogui.press('b')
         
     if b_count != prev_b_count:  
         prev_b_count = b_count
@@ -70,7 +67,7 @@ while True:
     
         
     if r[6] == 32:
-        pyautogui.press('enter')
+        # pyautogui.press('enter')
         break
     
     time.sleep(.01)
@@ -78,18 +75,27 @@ while True:
 data= pd.DataFrame(data_list)
 data['ButtonValue'] = data['button'].map(button_mapping)
 
+character = "Samus"
+opponent = "Pikachu"
+
+colors = {
+    1: 'blue',  # A button is blue
+    2: 'green', # B button is green
+    3: 'red'    # Start button is red
+}
+
 # Create a scatter plot
-plt.scatter(data['timestamp'], data['ButtonValue'])
+plt.scatter(data['timestamp'], data['ButtonValue'], c=data['ButtonValue'].map(colors))
 
 # Add labels and a legend
 plt.xlabel('Time')
 plt.ylabel('Button Pressed')
-plt.title('N64 Button Presses Over Time')
+plt.yticks([1, 2, 3],["A","B","Start"])
+plt.title(f"{character} vs. {opponent} Buttons Pressed")
 plt.legend()
 # Show the plot
 
 
-character = "Samus"
 csv_file_path= f"./storedgames/{character}/{datetime.datetime.now()}"
 data.to_csv(csv_file_path, index=False)
 plt.show()
