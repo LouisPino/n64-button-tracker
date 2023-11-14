@@ -2,6 +2,17 @@ import usb.core
 import usb.util
 import time
 import pyautogui
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Initialize an empty DataFrame
+data_list = []
+
+# Assign a numeric value to each button
+button_mapping = {'A': 1, 'B': 2, 'Start': 3}  # continue for all buttons
+
+
+
 
 
 start_time = time.time()
@@ -38,7 +49,8 @@ while True:
     if r[5]== 47 and a_down==False:
         a_count+=1
         a_down=True
-        a_times.append(round(time.time()-start_time,2))
+        # a_times.append(round(time.time()-start_time,2))
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'A'})
         pyautogui.press('a')
         
     if r[5]==15:
@@ -51,11 +63,13 @@ while True:
     if r[5]== 79 and b_down==False:
         b_count+=1
         b_down = True
-        b_times.append(round(time.time()-start_time, 2))
+        data_list.append({'timestamp': round(time.time()-start_time,2), 'button': 'B'})
         pyautogui.press('b')
         
     if b_count != prev_b_count:  
         prev_b_count = b_count
+
+    
         
     if r[6] == 32:
         pyautogui.press('enter')
@@ -63,8 +77,21 @@ while True:
     
     time.sleep(.01)
 
-print(f"A pressed {a_count} times at {a_times} seconds")
-print(f"B pressed {b_count} times at {b_times} seconds")
+data= pd.DataFrame(data_list)
+data['ButtonValue'] = data['button'].map(button_mapping)
+
+# Create a scatter plot
+plt.scatter(data['timestamp'], data['ButtonValue'])
+
+# Add labels and a legend
+plt.xlabel('Time')
+plt.ylabel('Button Pressed')
+plt.title('N64 Button Presses Over Time')
+plt.legend()
+# Show the plot
+plt.show()
+# print(f"A pressed {a_count} times at {a_times} seconds")
+# print(f"B pressed {b_count} times at {b_times} seconds")
     
 # 1 - up(32) and down(224) C
 # 2 - left(224) and right(32) C
