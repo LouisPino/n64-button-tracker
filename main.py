@@ -36,6 +36,7 @@ def readCSV(path):
 if __name__ == "__main__" and sys.argv[1] == "read":
     csv_location = sys.argv[2]
     readCSV(csv_location)
+    
 
 
 a_down = False
