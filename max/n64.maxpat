@@ -202,7 +202,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 2161.0, 641.0, 100.0, 22.0 ]
+					"patching_rect" : [ 2191.0, 601.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -614,7 +614,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2258.5, 239.0, 29.5, 22.0 ],
-					"text" : "815"
+					"text" : "819"
 				}
 
 			}
@@ -697,7 +697,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2374.5, 249.0, 29.5, 22.0 ],
-					"text" : "S"
+					"text" : "B"
 				}
 
 			}
@@ -930,18 +930,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-57",
-					"linecount" : 10,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1463.0, 233.6666659116745, 150.0, 141.0 ],
-					"text" : "A and B are drums sampled from their game\n\nZ is a held thing, reactive to stick left and right\n\nAll taunt buttons are taunts\n\nR- sfx from their game"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-51",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1129,18 +1117,6 @@
 					"outlettype" : [ "int", "bang" ],
 					"patching_rect" : [ 205.5, 307.0, 32.0, 22.0 ],
 					"text" : "t 1 b"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"linecount" : 16,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 439.0, 72.5, 150.0, 221.0 ],
-					"text" : "A- 49\nB- 50\nStart- 57\nL- 54\nR- 55 \nz- 56\nD^- 60\nD>-61\nDv-62\nD<-63\nC^- 8, 8192 32767\nC>- 20, 8192 32767\nCv- 8, 57473 32767\nC<-20, 57473 32767\nAn ^v - 4, 0-65535\nAn <> - 0, 0-65535"
 				}
 
 			}
@@ -6619,7 +6595,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 941.25, 238.0, 56.0, 23.0 ],
-					"text" : "22 0"
+					"text" : "15 0"
 				}
 
 			}
@@ -6711,7 +6687,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 173.0, 199.0, 56.0, 23.0 ],
-					"text" : "14 22"
+					"text" : "9 0"
 				}
 
 			}
