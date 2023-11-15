@@ -1,10 +1,12 @@
-var characters = ["samus", "pikachu", "falcon", "ness", "luigi", "mario", "dk", "kirby", "jiggypuff", "link", "fox", "yoshi"]
+var characters = ["Samus", "Pikachu", "Captain-Falcon", "Ness", "Luigi", "Mario", "Donkey-Kong", "Kirby", "Jigglypuff", "Link", "Fox", "Yoshi"]
 var samples = ["A.wav","B.wav", "Start.wav", "R.wav", "L.wav", "Z.wav"]
 
 inlets = 1;
 outlets = samples.length;
-function msg_int(msg){
-	for(var i = 0; i<samples.length; i++){
-		outlet(i, "open", "./samples/"+characters[msg]+"/"+samples[i])
+function bang(){
+	for(var i = 0; i<characters.length; i++){
+	for(var j = 0; j<samples.length; j++){
+		outlet(j, "preloadn", i+2, "/Users/louispino/Code/n64/samples/"+characters[i]+"/"+characters[i]+samples[j])
 		}
 	}
+}
