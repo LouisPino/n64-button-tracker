@@ -73,7 +73,11 @@ def readCSV(csv_file, character, opponent):
 
     # Setting the x-axis limits based on the data
     plt.xlim(min(df[1]) - 0.1, max(df[1]) + 0.1)
-    plt.show()
+    plt.savefig(f"{csv_file[:-3]}png", dpi='figure', format=None, metadata=None,
+            bbox_inches=None, pad_inches=0.1,
+            facecolor='auto', edgecolor='auto',
+            backend=None
+        )
 
     
 
@@ -82,4 +86,6 @@ if __name__ == "__main__" and sys.argv[1] == "read":
     character = sys.argv[3]
     opponent = sys.argv[4]
     readCSV(csv_location, character, opponent)
+    if sys.argv.length>5 and sys.argv[5] == "open":
+        plt.show()
     
