@@ -7,7 +7,9 @@ if len(sys.argv)>6 and sys.argv[6] == "jump":
     button_mapping = {'A': 1, 'B': 2, 'S': 3, "An_L": 4, "An_R": 5, "An_U": 6, "An_D": 7, "R": 8, "L": 9, "Z": 10, "C_U": 6, "C_D": 6, "C_L": 6, "C_R": 6}
 else:
     button_mapping = {'A': 1, 'B': 2, 'S': 3, "An_L": 4, "An_R": 5, "An_U": 6, "An_D": 7, "R": 8, "L": 9, "Z": 10, "C_U": 11, "C_D": 12, "C_L": 13, "C_R": 14}
-   
+
+reverse_button_mapping = {v: k for k, v in button_mapping.items()}
+
 
 
 colors = {
@@ -62,10 +64,18 @@ def readCSV(csv_file, character, opponent):
         except Exception as e:
             print(f"Error processing row {index}: {e}")
             continue  # Skip rows that cause an error
+    totals = {}
+    if len(sys.argv)>5 and sys.argv[5] == "reduce":
+        for row in data:
+            if reverse_button_mapping[row[1]] in totals.keys():
+                totals[reverse_button_mapping[row[1]]]+= 1
+            else:
+                totals[reverse_button_mapping[row[1]]] = 1
+        print(totals)
 
     # Plotting
     plt.figure(figsize=(10, 6))
-    reverse_button_mapping = {v: k for k, v in button_mapping.items()}
+
 
     for x, button_id in data:
         plt.scatter(x, button_id, color=colors[button_id], marker=shapes[button_id])
@@ -93,4 +103,3 @@ if __name__ == "__main__" and sys.argv[1] == "read":
 
 if len(sys.argv)>5 and sys.argv[5] == "open":
     plt.show()
-    
