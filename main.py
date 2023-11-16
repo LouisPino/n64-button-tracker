@@ -71,7 +71,7 @@ def readCSV(csv_file, character, opponent):
                 totals[reverse_button_mapping[row[1]]]+= 1
             else:
                 totals[reverse_button_mapping[row[1]]] = 1
-        print(totals)
+        print({k: v for k, v in sorted(totals.items(), key=lambda item: item[1])})
 
     # Plotting
     plt.figure(figsize=(10, 6))
@@ -93,7 +93,6 @@ def readCSV(csv_file, character, opponent):
             backend=None
         )
 
-    
 
 if __name__ == "__main__" and sys.argv[1] == "read":
     csv_location = sys.argv[2]
