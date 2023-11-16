@@ -86,6 +86,7 @@ if __name__ == "__main__" and sys.argv[1] == "read":
     character = sys.argv[3]
     opponent = sys.argv[4]
     readCSV(csv_location, character, opponent)
-    if sys.argv.length>5 and sys.argv[5] == "open":
-        plt.show()
+
+if len(sys.argv)>4 and sys.argv[5] == "open":
+    plt.show()
     
