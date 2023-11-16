@@ -3,11 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-if len(sys.argv)>6 and sys.argv[6] == "jump":
-    button_mapping = {'A': 1, 'B': 2, 'S': 3, "An_L": 4, "An_R": 5, "An_U": 6, "An_D": 7, "R": 8, "L": 9, "Z": 10, "C_U": 6, "C_D": 6, "C_L": 6, "C_R": 6}
-else:
-    button_mapping = {'A': 1, 'B': 2, 'S': 3, "An_L": 4, "An_R": 5, "An_U": 6, "An_D": 7, "R": 8, "L": 9, "Z": 10, "C_U": 11, "C_D": 12, "C_L": 13, "C_R": 14}
-   
+ 
 
 
 colors = {
@@ -91,6 +87,6 @@ if __name__ == "__main__" and sys.argv[1] == "read":
     opponent = sys.argv[4]
     readCSV(csv_location, character, opponent)
 
-if len(sys.argv)>5 and sys.argv[5] == "open":
+if len(sys.argv)>4 and sys.argv[5] == "open":
     plt.show()
     
