@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1599.0, 87.0, 1409.0, 959.0 ],
+		"rect" : [ 35.0, 100.0, 1313.0, 758.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -56,7 +56,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1041.301291972398758, 698.901133060455322, 88.903012931346893, 20.0 ],
+					"patching_rect" : [ 1041.301291972398758, 698.901133060455322, 89.0, 20.0 ],
 					"text" : "Helper patches"
 				}
 
@@ -1502,7 +1502,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 986.155811369419098, 469.420485198497772, 150.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "holding z triggers granulator"
 				}
 
@@ -1515,7 +1514,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1353.518465220928192, 248.925969660282135, 150.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "Maybe playback stage music at speed/pitch determined by energy"
 				}
 
@@ -1528,7 +1526,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1162.694280803203583, 248.925969660282135, 150.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "Maybe a drum machine that changes samples based on time"
 				}
 
@@ -1910,7 +1907,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 135.999999701976776, 35.185435622930527, 50.0, 22.0 ],
-									"text" : "L"
+									"text" : "An_U"
 								}
 
 							}
@@ -5329,7 +5326,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 708.144801414012818, 433.438663423061371, 77.0, 22.0 ],
-					"text" : "1.411111"
+					"text" : "127."
 				}
 
 			}
@@ -6049,7 +6046,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 119.0, 1197.0, 742.0 ],
+						"rect" : [ 59.0, 119.0, 817.0, 742.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6078,6 +6075,18 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 202.855607807636261, 25.0, 29.5, 22.0 ],
+									"text" : "A"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-69",
 									"maxclass" : "newobj",
@@ -9291,6 +9300,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-304", 0 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-66", 4 ],
 									"source" : [ "obj-117", 0 ]
 								}
@@ -10157,11 +10173,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-46",
-					"linecount" : 22,
+					"linecount" : 21,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 63.534686136245682, 677.133552938699722, 179.72833755016336, 301.0 ],
+					"patching_rect" : [ 63.534686136245682, 677.133552938699722, 181.0, 288.0 ],
 					"text" : "CONVERT ALL TO POLY \n\n\n\ndefine a sample and signal path for each move of each character\n\n\nmake sequencer or something that takes input from both players that is continuous\n\n\n\nfind a good way to use analog stick\n\n\n\n\nGet energy value onto plot"
 				}
 
@@ -11098,7 +11114,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 959.5, 425.0, 57.0, 22.0 ],
-									"text" : "Luigi/"
+									"text" : "Donkey/"
 								}
 
 							}
@@ -11307,7 +11323,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1201.5, 262.0, 29.5, 35.0 ],
-									"text" : "1669"
+									"text" : "1688"
 								}
 
 							}
@@ -11385,12 +11401,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-260",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1317.5, 272.0, 29.5, 22.0 ],
-									"text" : "L"
+									"text" : "An_U"
 								}
 
 							}
@@ -12287,7 +12304,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 464.256996154785156, 197.080295979976654, 56.0, 23.0 ],
-					"text" : "19 0"
+					"text" : "9 0"
 				}
 
 			}
