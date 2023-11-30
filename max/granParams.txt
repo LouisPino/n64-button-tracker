@@ -1,6 +1,6 @@
 0, 200 600 200 1200 1. 2. 0.7 1. SamusGrain.wav;
-1, 100 400 100 600 1. 2. 0.7 1. PikachuGrain.wav;
-2, 100 400 100 600 1. 2. 0.7 1. Captain-FalconGrain.wav;
+1, 200 600 200 1200 1. 2. 0.7 1. PikachuGrain.wav;
+2, 100 400 100 600 1. 2. 0.5 1. Captain-FalconGrain.wav;
 3, 100 400 100 600 1. 2. 0.7 1. NessGrain.wav;
 4, 100 400 100 600 1. 2. 0.7 1. LuigiGrain.wav;
 5, 100 400 100 600 1. 2. 0.7 1. MarioGrain.wav;
