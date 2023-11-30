@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1404.0, 85.0, 1109.0, 1280.0 ],
+		"rect" : [ 1404.0, 85.0, 1120.0, 1280.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,41 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 597.161097460985275, 475.513882339000702, 70.0, 22.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.037976104021254, 451.513882339000702, 70.0, 22.0 ],
+					"text" : "loadmess 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1125.0, 328.0, 106.0, 20.0 ],
+					"text" : "NEEDS TESTING"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "gain~",
@@ -184,7 +219,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-117",
@@ -1881,8 +1915,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 414.876196831464767, 176.045197129249573, 77.0, 22.0 ],
-					"text" : "8 5"
+					"patching_rect" : [ 414.876196831464767, 178.045197129249573, 77.0, 22.0 ],
+					"text" : "0 0"
 				}
 
 			}
@@ -2051,8 +2085,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 183.0, 127.0, 75.0, 22.0 ],
-									"text" : "value stocks"
+									"patching_rect" : [ 233.0, 116.0, 61.0, 22.0 ],
+									"text" : "value kills"
 								}
 
 							}
@@ -2076,7 +2110,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 183.0, 284.0, 30.0, 30.0 ]
+									"patching_rect" : [ 183.0, 293.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -2121,7 +2155,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-79", 0 ]
 								}
 
@@ -2129,7 +2163,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-2", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-79", 0 ]
 								}
 
@@ -2187,19 +2221,19 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p getStocks"
+					"text" : "p getKills"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-153",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1335.704540634155364, 12.97029185295105, 171.0, 48.0 ],
-					"text" : "Count some things for longer events eg. Press B five times and plays a 10 second riff"
+					"patching_rect" : [ 1335.704540634155364, 12.97029185295105, 171.0, 62.0 ],
+					"text" : "Count some things for longer events eg. Press B five times and plays a 10 second riff or changes some params"
 				}
 
 			}
@@ -7703,7 +7737,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 252.736291289329529, 324.0, 30.0, 30.0 ]
+									"patching_rect" : [ 252.736291289329529, 277.730628460645676, 30.0, 30.0 ]
 								}
 
 							}
@@ -7738,7 +7772,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 252.736291289329529, 285.598761886358261, 63.0, 22.0 ],
+									"patching_rect" : [ 294.736291289329529, 277.730628460645676, 63.0, 22.0 ],
 									"text" : "value time"
 								}
 
@@ -7844,7 +7878,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-115", 0 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-114", 0 ]
 								}
 
@@ -7852,7 +7886,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-114", 0 ]
 								}
 
@@ -7972,7 +8006,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 219.75, 390.0, 77.0, 22.0 ],
+									"patching_rect" : [ 219.75, 394.0, 77.0, 22.0 ],
 									"text" : "value energy"
 								}
 
@@ -12646,12 +12680,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-46",
-					"linecount" : 6,
+					"linecount" : 12,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 808.5, 611.110308915376663, 329.0, 89.0 ],
-					"text" : "CONVERT ALL TO POLY \n\nGet energy value onto plot\n\nMake a better way to keep track of stocks (probably just need a third person, maybe they can also control paramters)"
+					"patching_rect" : [ 856.110319077968597, 492.324567079544067, 152.0, 172.0 ],
+					"text" : "MAKE IT WORK FOR 2 PLAYER\n\nTHEN 4 PLAYER \n\nGet energy value onto plot\n\nMake a better way to keep track of stocks (probably just need a third person, maybe they can also control paramters)"
 				}
 
 			}
@@ -13053,7 +13087,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 364.564772516489029, 666.110308915376663, 182.0, 34.0 ],
+					"patching_rect" : [ 364.564772516489029, 698.110308915376663, 182.0, 34.0 ],
 					"text" : "RUN ME IN YOUR TERMINAL TO VIEW PLOT"
 				}
 
@@ -13066,7 +13100,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 364.564772516489029, 602.051220268011093, 182.0, 64.0 ],
+					"patching_rect" : [ 364.564772516489029, 634.051220268011093, 182.0, 64.0 ],
 					"text" : "python3 code/n64/main.py read /Users/louispino/Code/n64/max/savedgames/Samus/210.csv Samus Mario"
 				}
 
@@ -14756,7 +14790,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
-					"hidden" : 1,
 					"id" : "obj-397",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -14815,7 +14848,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 19.246886813640685, 439.860416889190674, 271.782178580760956, 20.0 ],
+					"patching_rect" : [ 170.246886813640685, 590.860416889190674, 271.782178580760956, 20.0 ],
 					"text" : "Character select / CSV recorder / Button tracker"
 				}
 
@@ -14873,7 +14906,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 64.137976104021163, 665.348249882459641, 182.0, 34.0 ],
+					"patching_rect" : [ 64.137976104021163, 697.348249882459641, 182.0, 34.0 ],
 					"text" : "RUN ME IN YOUR TERMINAL TO VIEW PLOT"
 				}
 
@@ -14886,7 +14919,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.137976104021163, 602.051220268011093, 182.0, 64.0 ],
+					"patching_rect" : [ 64.137976104021163, 634.051220268011093, 182.0, 64.0 ],
 					"text" : "python3 code/n64/main.py read /Users/louispino/Code/n64/max/savedgames/Samus/210.csv Samus Mario"
 				}
 
@@ -16644,7 +16677,6 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
-					"hidden" : 1,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -17034,8 +17066,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-285", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-374", 0 ],
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
