@@ -1,0 +1,12 @@
+0, 200 600 200 1200 1. 2. 0.7 1. SamusGrain.wav;
+1, 100 400 100 600 1. 2. 0.7 1. PikachuGrain.wav;
+2, 100 400 100 600 1. 2. 0.7 1. Captain-FalconGrain.wav;
+3, 100 400 100 600 1. 2. 0.7 1. NessGrain.wav;
+4, 100 400 100 600 1. 2. 0.7 1. LuigiGrain.wav;
+5, 100 400 100 600 1. 2. 0.7 1. MarioGrain.wav;
+6, 100 400 100 600 1. 2. 0.7 1. Donkey-KongGrain.wav;
+7, 100 400 100 600 1. 2. 0.7 1. KirbyGrain.wav;
+8, 100 400 100 600 1. 2. 0.7 1. JigglypuffGrain.wav;
+9, 100 400 100 600 1. 2. 0.7 1. LinkGrain.wav;
+10, 100 400 100 600 1. 2. 0.7 1. FoxGrain.wav;
+11, 100 400 100 600 1. 2. 0.7 1. YoshiGrain.wav;
