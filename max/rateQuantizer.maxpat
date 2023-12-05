@@ -94,7 +94,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "list" ],
 					"patching_rect" : [ 215.0, 106.0, 30.0, 30.0 ]
 				}
 
@@ -118,8 +118,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 215.0, 158.636408567428589, 51.0, 22.0 ],
-					"text" : "zl group"
+					"patching_rect" : [ 215.0, 158.636408567428589, 75.0, 22.0 ],
+					"text" : "zl group 100"
 				}
 
 			}
