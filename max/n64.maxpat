@@ -44,7 +44,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1543.0, 973.0, 77.0, 20.0 ],
+					"patching_rect" : [ 1544.0, 973.0, 67.0, 20.0 ],
 					"text" : "Start - End"
 				}
 
@@ -55,7 +55,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1426.0, 973.0, 77.0, 20.0 ],
+					"patching_rect" : [ 1426.0, 973.0, 72.0, 20.0 ],
 					"text" : "Start - End"
 				}
 
@@ -1710,12 +1710,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-100",
-					"linecount" : 5,
+					"linecount" : 12,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 885.0, 1005.0, 150.0, 75.0 ],
-					"text" : "GET SAMPLES FOR MAPS\n\nGET SAMPLES FOR CHARACTERS"
+					"patching_rect" : [ 885.0, 1005.0, 150.0, 172.0 ],
+					"text" : "GET SAMPLES FOR MAPS\n\nGET SAMPLES FOR CHARACTERS\n\nMAKE IT WORK FOR 2 PLAYER\n\nTHEN 4 PLAYER \n\nGet energy value onto plot"
 				}
 
 			}
@@ -1854,6 +1854,18 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-71",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 854.5, 383.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-67",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -1961,8 +1973,8 @@
 										"followglobaltempo" : 0,
 										"formantcorrection" : 0,
 										"mode" : "basic",
-										"originallength" : [ 237133.431292517052498, "ticks" ],
-										"originaltempo" : 120.000000000000028,
+										"originallength" : [ 137422.084353741520317, "ticks" ],
+										"originaltempo" : 120.000000000000043,
 										"pitchcorrection" : 0,
 										"quality" : "basic",
 										"timestretch" : [ 0 ]
@@ -1997,8 +2009,8 @@
 										"followglobaltempo" : 0,
 										"formantcorrection" : 0,
 										"mode" : "basic",
-										"originallength" : [ 237133.431292517052498, "ticks" ],
-										"originaltempo" : 120.000000000000028,
+										"originallength" : [ 132258.176870748342481, "ticks" ],
+										"originaltempo" : 120.000000000000043,
 										"pitchcorrection" : 0,
 										"quality" : "basic",
 										"timestretch" : [ 0 ]
@@ -3396,6 +3408,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"order" : 2,
+									"source" : [ "obj-25", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-2", 0 ],
 									"source" : [ "obj-25", 0 ]
 								}
@@ -3474,13 +3494,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-27", 0 ],
-									"source" : [ "obj-26", 5 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-29", 0 ],
 									"source" : [ "obj-26", 0 ]
 								}
@@ -3525,6 +3538,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-56", 0 ],
 									"source" : [ "obj-26", 8 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-71", 0 ],
+									"source" : [ "obj-26", 5 ]
 								}
 
 							}
@@ -3639,6 +3659,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"order" : 2,
+									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
 									"order" : 1,
 									"source" : [ "obj-36", 0 ]
@@ -3650,6 +3678,14 @@
 									"destination" : [ "obj-48", 0 ],
 									"order" : 0,
 									"source" : [ "obj-36", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"order" : 2,
+									"source" : [ "obj-37", 0 ]
 								}
 
 							}
@@ -3924,6 +3960,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-27", 0 ],
+									"source" : [ "obj-71", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-104", 0 ],
 									"source" : [ "obj-72", 0 ]
 								}
@@ -4103,18 +4146,6 @@
 					}
 ,
 					"text" : "p MapEffects"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-63",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1192.0, 544.083900481462479, 165.494785481691451, 34.0 ],
-					"text" : "Samples for every character\nMap stuff"
 				}
 
 			}
@@ -6050,7 +6081,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.876196831464767, 122.096417397260666, 77.0, 22.0 ],
-					"text" : "33.161111"
+					"text" : "0."
 				}
 
 			}
@@ -16951,18 +16982,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-46",
-					"linecount" : 6,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 831.110319077968597, 609.051220268011093, 153.0, 89.0 ],
-					"text" : "MAKE IT WORK FOR 2 PLAYER\n\nTHEN 4 PLAYER \n\nGet energy value onto plot"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-403",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -19845,7 +19864,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1201.5, 224.0, 29.5, 36.0 ],
-									"text" : "18108"
+									"text" : "18506"
 								}
 
 							}
