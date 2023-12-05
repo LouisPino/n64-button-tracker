@@ -52,18 +52,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-93",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 2086.0, 635.0, 50.0, 22.0 ],
-					"text" : "39"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-90",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -113,7 +101,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1919.0, 942.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1987.0, 944.0, 50.0, 22.0 ],
 					"text" : "13380"
 				}
 
@@ -125,7 +113,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1755.0, 846.0, 42.0, 22.0 ],
+					"patching_rect" : [ 1860.0, 866.0, 42.0, 22.0 ],
 					"text" : "13340"
 				}
 
@@ -137,7 +125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "" ],
-					"patching_rect" : [ 1845.5, 1014.051220268011093, 63.0, 22.0 ],
+					"patching_rect" : [ 1913.5, 1016.051220268011093, 63.0, 22.0 ],
 					"text" : "unpack f s"
 				}
 
@@ -149,7 +137,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 1845.5, 990.051220268011093, 50.5, 22.0 ],
+					"patching_rect" : [ 1913.5, 992.051220268011093, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"precision" : 6
@@ -166,7 +154,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1899.5, 990.102440536022186, 77.0, 22.0 ],
+					"patching_rect" : [ 1967.5, 992.102440536022186, 77.0, 22.0 ],
 					"text" : "read 228.csv"
 				}
 
@@ -178,7 +166,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1847.0, 929.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1915.0, 931.0, 29.5, 22.0 ],
 					"text" : "+ 1"
 				}
 
@@ -190,7 +178,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1847.0, 895.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1915.0, 897.0, 29.5, 22.0 ],
 					"text" : "i"
 				}
 
@@ -214,7 +202,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1841.0, 852.0, 120.0, 22.0 ],
+					"patching_rect" : [ 1915.0, 866.0, 120.0, 22.0 ],
 					"text" : "if $i1 > $i2 then bang"
 				}
 
@@ -226,7 +214,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "" ],
-					"patching_rect" : [ 1991.0, 698.110308915376663, 63.0, 22.0 ],
+					"patching_rect" : [ 1991.0, 704.110308915376663, 63.0, 22.0 ],
 					"text" : "unpack f s"
 				}
 
@@ -383,12 +371,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-7",
-					"linecount" : 13,
+					"linecount" : 16,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1333.0, 642.051220268011093, 409.0, 186.0 ],
-					"text" : "Start:\nPlays first sound, checks time of next sound, starts metro 20\n\nLoop:\nif metro (reporting a timer) is greater than next one, play next one and get next time\n\nCounter resets on last row\n\n\nNotes:\n13340 is the first row of 228.csv, change numbers accordingly\n228.csv is 115 rows long"
+					"patching_rect" : [ 1333.0, 642.051220268011093, 409.0, 227.0 ],
+					"text" : "Start:\nPlays first sound, checks time of next sound, starts metro 20\n\nLoop:\nif metro (reporting a timer) is greater than next one, play next one and get next time\n\nCounter resets on last row\n\n\nNotes:\n13340 is the first row of 228.csv, change numbers accordingly\n228.csv is 115 rows long\n\n\nMust remove all commas between fields before coll will read it"
 				}
 
 			}
@@ -20156,15 +20144,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"order" : 2,
-					"source" : [ "obj-48", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-93", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-48", 0 ]
 				}
 
@@ -20172,7 +20152,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-97", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-48", 0 ]
 				}
 
