@@ -3,7 +3,7 @@ outlets = 1
 
 function msg_int(msg){
 if (msg == 0){
-outlet(0, .333)
+outlet(0, .25)
 }
 else if(msg == 127){
 outlet(0, 3);
