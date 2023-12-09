@@ -2,10 +2,10 @@ inlets = 1;
 outlets = 1
 
 function msg_int(msg){
-if (msg == 0){
+if (msg < 20){
 outlet(0, .25)
 }
-else if(msg == 127){
+else if(msg > 110){
 outlet(0, 3);
 }	
 else if(msg < 50){
