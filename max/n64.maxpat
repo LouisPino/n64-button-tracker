@@ -4413,12 +4413,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-100",
-					"linecount" : 18,
+					"linecount" : 17,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 658.0, 370.138613522052765, 215.0, 248.0 ],
-					"text" : "GET SAMPLES FOR CHARACTERS\n\nFINISH MAP FX\n\nMAKE IT WORK FOR 2 PLAYER\n\nDO SOMETHING WITH MASH\n\nMAKE GRAN NOT PITCHED SO IT WORKS ON ALL MAPS, or just get rid\n\nMake shit actually sound nice alotgether, compress and shit\n\n\nTHEN 4 PLAYER \n\nGet energy value onto plot"
+					"patching_rect" : [ 658.0, 370.138613522052765, 215.0, 234.0 ],
+					"text" : "GET SAMPLES FOR CHARACTERS\n\n\nMAKE IT WORK FOR 2 PLAYER\n\nDO SOMETHING WITH MASH\n\nMAKE GRAN NOT PITCHED SO IT WORKS ON ALL MAPS, or just get rid\n\nMake shit actually sound nice alotgether, compress and shit\n\n\nTHEN 4 PLAYER \n\nGet energy value onto plot"
 				}
 
 			}
@@ -10198,7 +10198,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.876196831464767, 122.096417397260666, 77.0, 22.0 ],
-					"text" : "496"
+					"text" : "546"
 				}
 
 			}
