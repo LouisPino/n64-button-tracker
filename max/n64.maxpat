@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1444.0, 762.0 ],
+		"rect" : [ 33.0, 100.0, 1444.0, 762.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,110 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-65",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "int" ],
+					"patching_rect" : [ 1318.110319077968597, 545.0, 47.0, 22.0 ],
+					"text" : "ctlin 77"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-64",
+					"maxclass" : "gain~",
+					"multichannelvariant" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1347.110319077968597, 575.0, 22.0, 140.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-63",
+					"maxclass" : "gain~",
+					"multichannelvariant" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1318.110319077968597, 575.0, 22.0, 140.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 400.365762645006271, 456.858717709779739, 96.0, 22.0 ],
+					"text" : "scale 0 127 0 11"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-61",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 400.365762645006271, 431.138613522052765, 117.0, 22.0 ],
+					"text" : "r P2CharacterSelect"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-59",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.037976104021254, 446.0, 96.0, 22.0 ],
+					"text" : "scale 0 127 0 11"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-58",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.037976104021254, 420.279895812273026, 117.0, 22.0 ],
+					"text" : "r P1CharacterSelect"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-53",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 228.037976104021254, 229.970296740531921, 150.0, 33.0 ],
+					"text" : "GamePad = Black\nPro Controller = Green"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-43",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 296.0, 197.0, 58.0, 22.0 ],
+					"patching_rect" : [ 254.0, 279.045197129249573, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -57,7 +155,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "int", "menu", "menu" ],
-					"patching_rect" : [ 294.0, 231.0, 99.0, 22.0 ],
+					"patching_rect" : [ 254.0, 306.0, 99.0, 22.0 ],
 					"text" : "t 0 1 menu menu"
 				}
 
@@ -65,24 +163,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"linecount" : 2,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 714.95005680024633, 110.096417397260666, 150.0, 33.0 ],
-					"text" : "Reset     1 Wins     1 stock\nStart       2 Wins     2 stock"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-47",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 678.161097460985275, 550.051220268011093, 215.0, 47.0 ],
-					"text" : "Instead of map sounds, one person plays map and one person plays in response to game"
+					"patching_rect" : [ 714.95005680024633, 110.096417397260666, 178.211040660738945, 127.0 ],
+					"text" : "Buttons:\nReset     1 Wins     1 stock\nStart       2 Wins     2 stock\n\nKnobs:\nP1 Character    P2 Character\n\nFaders:\nMaster Volume"
 				}
 
 			}
@@ -94,7 +180,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 64.137976104021163, 375.981285214424133, 50.0, 22.0 ],
-					"text" : "6 0"
+					"text" : "22 0"
 				}
 
 			}
@@ -118,7 +204,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 360.494704002142043, 375.981285214424133, 50.0, 22.0 ],
-					"text" : "14 0"
+					"text" : "6 0"
 				}
 
 			}
@@ -142,7 +228,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 939.693493509292693, 64.61576472222805, 70.0, 22.0 ],
-					"text" : "A"
+					"text" : "S"
 				}
 
 			}
@@ -344,18 +430,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1244.0, 244.0, 82.0, 22.0 ],
 					"text" : "loadmess 110"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-68",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 78.423691087961288, 451.513882339000702, 50.0, 22.0 ],
-					"text" : "0"
 				}
 
 			}
@@ -1480,7 +1554,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 272.494704002142043, 437.860416889190674, 62.0, 22.0 ],
+					"patching_rect" : [ 157.386562758684249, 395.138613522052765, 62.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1551,8 +1625,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1550.0, 228.926496118307114, 24.0, 24.0 ]
+					"parameter_enable" : 1,
+					"patching_rect" : [ 1550.0, 228.926496118307114, 24.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_initial" : [ 1 ],
+							"parameter_initial_enable" : 1,
+							"parameter_longname" : "toggle",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "toggle",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "toggle"
 				}
 
 			}
@@ -1601,8 +1689,65 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 645.0, 116.0, 50.0, 22.0 ],
+									"text" : "41"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 715.0, 311.0, 47.0, 22.0 ],
+									"text" : "ctlin 14"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 562.0, 307.0, 47.0, 22.0 ],
+									"text" : "ctlin 13"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 715.0, 335.0, 119.0, 22.0 ],
+									"text" : "s P2CharacterSelect"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 562.0, 335.0, 119.0, 22.0 ],
+									"text" : "s P1CharacterSelect"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-52",
 									"linecount" : 4,
@@ -1706,7 +1851,7 @@
 									"numoutlets" : 7,
 									"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "" ],
 									"patching_rect" : [ 368.0, 167.0, 124.0, 22.0 ],
-									"text" : "sel 41 74 42 74 43 75"
+									"text" : "sel 41 73 42 74 43 75"
 								}
 
 							}
@@ -1801,7 +1946,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 182.0, 205.0, 50.0, 22.0 ],
-									"text" : "110"
+									"text" : "127"
 								}
 
 							}
@@ -1972,6 +2117,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-18", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"source" : [ "obj-19", 0 ]
 								}
@@ -1995,6 +2147,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-26", 0 ],
 									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"source" : [ "obj-29", 0 ]
 								}
 
 							}
@@ -2049,6 +2208,14 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-32", 1 ],
+									"order" : 0,
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-8", 1 ],
 									"source" : [ "obj-4", 1 ]
 								}
@@ -2057,6 +2224,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
+									"order" : 1,
 									"source" : [ "obj-4", 0 ]
 								}
 
@@ -4797,12 +4965,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-100",
-					"linecount" : 3,
+					"linecount" : 10,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 678.161097460985275, 482.434674441814423, 215.0, 47.0 ],
-					"text" : "fix initial controller settings\n\ndo something with stocks"
+					"patching_rect" : [ 678.161097460985275, 446.0, 215.0, 141.0 ],
+					"text" : "do something with energy\n\nAdd tracks for hammer and star triggered by ctrl\n\nmake sample shit crazier faster\n\n\nMaybe just make map tracks all atonal then we don't have to play at all"
 				}
 
 			}
@@ -11025,7 +11193,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 427.0, 107.0, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "S"
 								}
 
 							}
@@ -13632,7 +13800,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1141.0, 197.0, 50.0, 22.0 ],
-									"text" : "4"
+									"text" : "136"
 								}
 
 							}
@@ -13801,7 +13969,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 319.0, 595.167083721332574, 50.0, 22.0 ],
-									"text" : "3"
+									"text" : "2"
 								}
 
 							}
@@ -14290,7 +14458,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 170.538939988613038, 132.908462445907617, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "S"
 								}
 
 							}
@@ -17096,7 +17264,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 2491.0, 223.0, 50.0, 22.0 ],
-									"text" : "4"
+									"text" : "136"
 								}
 
 							}
@@ -22934,7 +23102,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 431.494704002142043, 427.336524546146393, 62.0, 22.0 ],
+					"patching_rect" : [ 443.994704002142043, 403.336524546146393, 62.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -23778,7 +23946,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 959.5, 425.0, 57.0, 22.0 ],
-									"text" : "Pikachu/"
+									"text" : "Samus/"
 								}
 
 							}
@@ -23987,7 +24155,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1787.5, 515.0, 29.5, 35.0 ],
-									"text" : "37904"
+									"text" : "37927"
 								}
 
 							}
@@ -25107,13 +25275,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-392",
-					"items" : [ "Pro Controller", ",", "USB GamePad", ",", "Keyboard Backlight", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple Internal Keyboard / Trackpad 5", ",", "BTM", ",", "Headset", ",", "Page: 0x20, Usage: 0x8a", ",", "Page: 0xff00, Usage: 0x9", ",", "Vendor Defined Usage 0x5", ",", "Page: 0xff00, Usage: 0x5", ",", "Page: 0xff00, Usage: 0xff", ",", "Page: 0xff00, Usage: 0x4", ",", "Page: 0xff00, Usage: 0x3", ",", "Vendor Defined Usage 0x1" ],
+					"items" : [ "USB GamePad", ",", "Pro Controller", ",", "Keyboard Backlight", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple Internal Keyboard / Trackpad 5", ",", "BTM", ",", "Headset", ",", "Page: 0x20, Usage: 0x8a", ",", "Page: 0xff00, Usage: 0x9", ",", "Vendor Defined Usage 0x5", ",", "Page: 0xff00, Usage: 0x5", ",", "Page: 0xff00, Usage: 0xff", ",", "Page: 0xff00, Usage: 0x4", ",", "Page: 0xff00, Usage: 0x3", ",", "Vendor Defined Usage 0x1" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 553.0, 401.551220268011093, 100.0, 22.0 ]
+					"patching_rect" : [ 443.994704002142043, 375.981285214424133, 100.0, 22.0 ]
 				}
 
 			}
@@ -25375,7 +25543,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
@@ -25384,7 +25551,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1501.0, 162.0, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "S"
 								}
 
 							}
@@ -26049,7 +26216,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 959.5, 425.0, 57.0, 22.0 ],
-									"text" : "Samus/"
+									"text" : "Yoshi/"
 								}
 
 							}
@@ -26258,7 +26425,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1787.5, 515.0, 29.5, 35.0 ],
-									"text" : "37414"
+									"text" : "40469"
 								}
 
 							}
@@ -26341,7 +26508,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1923.75, 563.0, 30.0, 22.0 ],
-									"text" : "A"
+									"text" : "S"
 								}
 
 							}
@@ -27489,7 +27656,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-15",
-					"items" : [ "Pro Controller", ",", "USB GamePad", ",", "Keyboard Backlight", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple Internal Keyboard / Trackpad 5", ",", "BTM", ",", "Headset", ",", "Page: 0x20, Usage: 0x8a", ",", "Page: 0xff00, Usage: 0x9", ",", "Vendor Defined Usage 0x5", ",", "Page: 0xff00, Usage: 0x5", ",", "Page: 0xff00, Usage: 0xff", ",", "Page: 0xff00, Usage: 0x4", ",", "Page: 0xff00, Usage: 0x3", ",", "Vendor Defined Usage 0x1" ],
+					"items" : [ "USB GamePad", ",", "Pro Controller", ",", "Keyboard Backlight", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple Internal Keyboard / Trackpad 5", ",", "BTM", ",", "Headset", ",", "Page: 0x20, Usage: 0x8a", ",", "Page: 0xff00, Usage: 0x9", ",", "Vendor Defined Usage 0x5", ",", "Page: 0xff00, Usage: 0x5", ",", "Page: 0xff00, Usage: 0xff", ",", "Page: 0xff00, Usage: 0x4", ",", "Page: 0xff00, Usage: 0x3", ",", "Vendor Defined Usage 0x1" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -27655,7 +27822,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-39", 1 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -27718,7 +27885,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -27802,15 +27969,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"source" : [ "obj-26", 0 ]
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-26", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"source" : [ "obj-26", 1 ]
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -27823,7 +27990,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-39", 1 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -27926,7 +28093,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-39", 1 ],
 					"order" : 0,
 					"source" : [ "obj-31", 0 ]
 				}
@@ -27934,7 +28101,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"order" : 1,
 					"source" : [ "obj-31", 0 ]
 				}
@@ -28037,15 +28204,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
-					"source" : [ "obj-39", 1 ]
+					"destination" : [ "obj-63", 0 ],
+					"source" : [ "obj-39", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"source" : [ "obj-39", 0 ]
+					"destination" : [ "obj-64", 0 ],
+					"source" : [ "obj-39", 1 ]
 				}
 
 			}
@@ -28154,14 +28321,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-39", 1 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -28175,7 +28342,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-50", 0 ]
 				}
 
@@ -28217,8 +28384,64 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
+					"destination" : [ "obj-59", 0 ],
+					"source" : [ "obj-58", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-285", 0 ],
+					"source" : [ "obj-59", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 1 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-374", 0 ],
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-60", 0 ],
+					"source" : [ "obj-61", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-64", 0 ],
+					"source" : [ "obj-63", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 1 ],
+					"source" : [ "obj-64", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-63", 0 ],
+					"source" : [ "obj-65", 0 ]
 				}
 
 			}
@@ -28281,6 +28504,7 @@
 			"obj-286" : [ "umenu[3]", "umenu[3]", 0 ],
 			"obj-29" : [ "umenu", "umenu", 0 ],
 			"obj-31" : [ "gain~[4]", "gain~", 0 ],
+			"obj-34" : [ "toggle", "toggle", 0 ],
 			"obj-35" : [ "gain~[6]", "gain~", 0 ],
 			"obj-36" : [ "gain~[7]", "gain~", 0 ],
 			"obj-373" : [ "umenu[4]", "umenu[4]", 0 ],
