@@ -1,5 +1,5 @@
 var characters = ["Samus", "Pikachu", "Captain-Falcon", "Ness", "Luigi", "Mario", "Donkey-Kong", "Kirby", "Jigglypuff", "Link", "Fox", "Yoshi"]
-var samples = ["A.wav", "A1.wav", "A2.wav", "A3.wav", "B.wav", "Start.wav", "R.wav", "L.wav", "Z.wav"]
+var samples = ["A.wav", "A1.wav", "A2.wav", "A3.wav", "B.wav", "Start.wav", "R.wav", "L.wav", "Z.wav", "Mash.wav"]
 
 inlets = 1;
 outlets = samples.length;
