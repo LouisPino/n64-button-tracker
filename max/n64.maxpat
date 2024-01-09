@@ -41,11 +41,11 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-47",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 706.0, 680.0, 153.0, 60.0 ],
+					"patching_rect" : [ 688.0, 465.551220268011093, 215.0, 47.0 ],
 					"text" : "Instead of map sounds, one person plays map and one person plays in response to game"
 				}
 
@@ -58,7 +58,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 278.0, 392.0, 50.0, 22.0 ],
-					"text" : "6 0"
+					"text" : "10 0"
 				}
 
 			}
@@ -118,7 +118,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 922.693493509292693, 161.0, 50.0, 22.0 ],
-					"text" : "A"
+					"text" : "Z_Up"
 				}
 
 			}
@@ -4521,12 +4521,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-100",
-					"linecount" : 19,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 688.0, 401.551220268011093, 215.0, 261.0 ],
-					"text" : "GET SAMPLES FOR ALL CHARACTERS\n\nMAKE IT WORK FOR 2 PLAYER\n\nMake  actually sound nice alotgether, compress and stuff\n\nMake controls on midi so you dont have to exit games\n\nRandomize sample volume, add form to effects usage, \n\n\n\nTHEN 4 PLAYER \n\nGet energy value onto plot"
+					"patching_rect" : [ 688.0, 401.551220268011093, 215.0, 33.0 ],
+					"text" : "Make controls on midi so you dont have to exit games"
 				}
 
 			}
@@ -8507,13 +8507,13 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-12",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 260.0, 7.0, 36.0, 49.0 ],
-									"text" : "Mash"
+									"text" : "Shield_Up"
 								}
 
 							}
@@ -10305,7 +10305,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.876196831464767, 122.096417397260666, 77.0, 22.0 ],
-					"text" : "489"
+					"text" : "87"
 				}
 
 			}
@@ -10317,7 +10317,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.876196831464767, 70.471166789531708, 77.0, 22.0 ],
-					"text" : "50.8"
+					"text" : "0."
 				}
 
 			}
@@ -10749,7 +10749,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 427.0, 107.0, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "Z_Up"
 								}
 
 							}
@@ -16649,7 +16649,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 243.5, 231.0, 50.0, 22.0 ],
-									"text" : "12"
+									"text" : "0"
 								}
 
 							}
@@ -16697,7 +16697,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 188.5, 231.0, 29.5, 22.0 ],
-									"text" : "12"
+									"text" : "0"
 								}
 
 							}
@@ -17012,7 +17012,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-245",
@@ -17213,7 +17212,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1141.0, 197.0, 50.0, 22.0 ],
-									"text" : "488"
+									"text" : "86"
 								}
 
 							}
@@ -17274,7 +17273,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "bang" ],
 									"patching_rect" : [ 914.772276103496552, 273.542904119663262, 40.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : "sfplay~ 1"
 								}
 
@@ -17287,7 +17285,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 934.272276103496552, 311.042904119663262, 27.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Mash"
 								}
 
@@ -17384,7 +17381,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 319.0, 595.167083721332574, 50.0, 22.0 ],
-									"text" : "3"
+									"text" : "1"
 								}
 
 							}
@@ -17669,7 +17666,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 179.605607807636261, 819.543320934944177, 150.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Route to random effect, randomize params"
 								}
 
@@ -17874,7 +17870,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 170.538939988613038, 132.908462445907617, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "Z_Up"
 								}
 
 							}
@@ -18042,7 +18038,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "bang" ],
 									"patching_rect" : [ 783.772276103496552, 280.042904119663262, 40.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : "sfplay~ 1"
 								}
 
@@ -18067,7 +18062,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "bang" ],
 									"patching_rect" : [ 695.022276103496552, 280.042904119663262, 40.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : "sfplay~ 1"
 								}
 
@@ -18115,7 +18109,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "bang" ],
 									"patching_rect" : [ 520.285714285714221, 280.042904119663262, 40.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : "sfplay~ 1"
 								}
 
@@ -18140,7 +18133,6 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "bang" ],
 									"patching_rect" : [ 428.772276103496552, 285.042904119663262, 40.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : "sfplay~ 1"
 								}
 
@@ -20684,7 +20676,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 2491.0, 223.0, 50.0, 22.0 ],
-									"text" : "488"
+									"text" : "86"
 								}
 
 							}
@@ -28975,7 +28967,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
@@ -28984,7 +28975,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1501.0, 162.0, 50.0, 22.0 ],
-									"text" : "A"
+									"text" : "Z_Up"
 								}
 
 							}
@@ -29649,7 +29640,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 959.5, 425.0, 57.0, 22.0 ],
-									"text" : "Pikachu/"
+									"text" : "Ness/"
 								}
 
 							}
@@ -29858,7 +29849,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1787.5, 515.0, 29.5, 35.0 ],
-									"text" : "36511"
+									"text" : "37404"
 								}
 
 							}
@@ -29936,12 +29927,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-260",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1923.75, 563.0, 30.0, 22.0 ],
-									"text" : "A"
+									"patching_rect" : [ 1923.75, 563.0, 30.0, 35.0 ],
+									"text" : "Z_Up"
 								}
 
 							}
