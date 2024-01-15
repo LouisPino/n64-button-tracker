@@ -1,5 +1,4 @@
-# N64 Button Tracker in Python
-
+# N64 Button Tracker
 ## Overview
 This project is dedicated to tracking and visualizing button clicks in Super Smash Bros 64 matches. The primary goal is to gain insights into Human-Computer Interaction (HCI) within these matches and apply these insights to design an innovative, musically interactive performance piece. This interactive experience will take input from two players, creating a unique blend of gaming and musical expression.
 
