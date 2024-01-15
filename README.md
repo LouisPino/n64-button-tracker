@@ -20,4 +20,4 @@ This project is dedicated to tracking and visualizing button clicks in Super Sma
 3. **Visualization:** The script then visualizes the data using `matplotlib`, providing insights into player interaction patterns.
 4. **Musical Interaction Design:** Based on the visualized data and insights, an interactive musical performance piece is designed, responsive to the input from two players.
 
-![Example Output](https://media.licdn.com/dms/image/D4E22AQGgLyNnwg7ZNg/feedshare-shrink_1280/0/1699982323696?e=1707955200&v=beta&t=UkVSYg7usymHZsOHOLgXwPujvNS_JS5SykKrekL90ik "Example Output")
+![Example Output](https://res.cloudinary.com/dsvcyich1/image/upload/v1705331616/224_w5mmrl.png "Example Output")
