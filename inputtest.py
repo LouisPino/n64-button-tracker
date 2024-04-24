@@ -6,22 +6,34 @@ from pythonosc import osc_message_builder
 
 # Set the IP address and port
 ip = "127.0.0.1"  # Localhost
-port = 5006       # Port number
-dest_port = 5007  # Port number
+port = 5007  # Port number
 
-client = udp_client.SimpleUDPClient(ip, dest_port)
+client = udp_client.SimpleUDPClient(ip, port)
 
 
 # Create a socket for UDP
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Bind the socket to the address and port
-sock.bind((ip, port))
 
 sock.setblocking(0)
-print(f"Listening for messages on {ip}:{port}")
 
-# Infinite loop to keep the server runnin
+btn_map = {
+    0: "A",
+    1: "B",
+    2: "X",
+    3: "Y",
+    4: "DLeft",
+    5: "DRight",
+    6: "DDown",
+    7: "DUp",
+    8: "S",
+    9: "Z",
+    10: "R",
+    11: "L",
+}
+
+
 
 # Initialize Pygame and the joystick subsystem
 pygame.init()
@@ -29,11 +41,20 @@ pygame.joystick.init()
 
 # Check for connected joysticks and initialize the first one found
 if pygame.joystick.get_count() > 0:
-    joystick = pygame.joystick.Joystick(0)
-    joystick.init()
-    print(f"Joystick initialized: {joystick.get_name()}")
+    joystick1 = pygame.joystick.Joystick(0)
+    joystick2 = pygame.joystick.Joystick(1)
+    joystick3 = pygame.joystick.Joystick(2)
+    joystick4 = pygame.joystick.Joystick(3)
+    joystick1.init()
+    joystick2.init()
+    joystick3.init()
+    joystick4.init()
+    print(f"Joystick 1 initialized: {joystick1.get_name()}")
+    print(f"Joystick 2 initialized: {joystick2.get_name()}")
+    print(f"Joystick 3 initialized: {joystick3.get_name()}")
+    print(f"Joystick 4 initialized: {joystick4.get_name()}")
 else:
-    print("No joystick detected")
+    print("No joysticks detected")
     pygame.quit()
     exit()
 
@@ -41,19 +62,51 @@ else:
 try:
     while True:
         pygame.event.pump()  # Update internal state
-        for i in range(joystick.get_numbuttons()):
-            if joystick.get_button(i):
-                message = f"Button {i} pressed"
-                print(message)
+        for i in range(joystick1.get_numbuttons()):
+            if joystick1.get_button(i):
+                message = f"{btn_map[i]} pressed"
                 # Create an OSC message
-                osc_message = osc_message_builder.OscMessageBuilder(address="/button/press")
-                osc_message.add_arg(i)  # Add button index as an argument
+                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P1")
+                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                osc_message = osc_message.build()
+                client.send(osc_message)
+                
+        for i in range(joystick2.get_numbuttons()):
+            if joystick2.get_button(i):
+                message = f"{btn_map[i]} pressed"
+                # Create an OSC message
+                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P2")
+                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
                 osc_message = osc_message.build()
 
                 # Send the OSC message
                 client.send(osc_message)
-                time.sleep(0.1)  # Sleep to reduce CPU usage
+        for i in range(joystick3.get_numbuttons()):
+            if joystick3.get_button(i):
+                message = f"{btn_map[i]} pressed"
+                print(message)
+                # Create an OSC message
+                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P3")
+                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                osc_message = osc_message.build()
 
+                # Send the OSC message
+                client.send(osc_message)
+                
+        for i in range(joystick4.get_numbuttons()):
+            if joystick4.get_button(i):
+                message = f"{btn_map[i]} pressed"
+                # Create an OSC message
+                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P4")
+                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                osc_message = osc_message.build()
+
+                # Send the OSC message
+                client.send(osc_message)
+                
+                
+                
 finally:
-    pygame.joystick.quit()  # Properly shutdown joystick subsystem
+    pygame.joystick1.quit()  # Properly shutdown joystick subsystem
+    pygame.joystick2.quit()  # Properly shutdown joystick subsystem
     pygame.quit()  # Quit pygame
