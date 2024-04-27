@@ -80,8 +80,6 @@ try:
                 client.send(osc_message)
             
             
-            
-            
         for i in range(joystick2.get_numbuttons()):
             if joystick2.get_button(i):
                 # Create an OSC message
