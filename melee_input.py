@@ -61,10 +61,13 @@ else:
 # Main loop to process joystick inputs
 
 p1_last_btn = -1
+p2_last_btn = -1
+p3_last_btn = -1
+p4_last_btn = -1
+
 try:
     while True:
-        pygame.event.pump()  # Update internal state
-        
+        pygame.event.pump()  # Update internal state 
         if p1_last_btn >= 0 and joystick1.get_button(p1_last_btn) == 1:
             pass
         else:
@@ -74,11 +77,9 @@ try:
                     osc_message = osc_message_builder.OscMessageBuilder(address="/button/P1")
                     osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
                     osc_message = osc_message.build()
-                    print(osc_message.address, osc_message.params)
                     client.send(osc_message)
                     p1_last_btn = i
                     break
-
             # Handle joystick axes
         for j in range(joystick1.get_numaxes()):
             axis_value = joystick1.get_axis(j)
@@ -89,16 +90,18 @@ try:
                 osc_message = osc_message.build()
                 client.send(osc_message)
             
-            
-        for i in range(joystick2.get_numbuttons()):
-            if joystick2.get_button(i):
-                # Create an OSC message
-                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P2")
-                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
-                osc_message = osc_message.build()
-
-                # Send the OSC message
-                client.send(osc_message)
+        if p2_last_btn >= 0 and joystick2.get_button(p2_last_btn) == 1:
+            pass
+        else:
+            p2_last_btn = -1
+            for i in range(joystick1.get_numbuttons()):
+                if joystick2.get_button(i) == 1:
+                    osc_message = osc_message_builder.OscMessageBuilder(address="/button/P2")
+                    osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                    osc_message = osc_message.build()
+                    client.send(osc_message)
+                    p2_last_btn = i
+                    break
  
         for j in range(joystick2.get_numaxes()):
             axis_value = joystick2.get_axis(j)
@@ -110,15 +113,18 @@ try:
                 client.send(osc_message)
                 
         
-        for i in range(joystick3.get_numbuttons()):
-            if joystick3.get_button(i):
-                # Create an OSC message
-                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P3")
-                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
-                osc_message = osc_message.build()
-
-                # Send the OSC message
-                client.send(osc_message)
+        if p3_last_btn >= 0 and joystick3.get_button(p3_last_btn) == 1:
+            pass
+        else:
+            p3_last_btn = -1
+            for i in range(joystick3.get_numbuttons()):
+                if joystick3.get_button(i) == 1:
+                    osc_message = osc_message_builder.OscMessageBuilder(address="/button/P3")
+                    osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                    osc_message = osc_message.build()
+                    client.send(osc_message)
+                    p3_last_btn = i
+                    break
                 
         for j in range(joystick3.get_numaxes()):
             axis_value = joystick3.get_axis(j)
@@ -129,16 +135,19 @@ try:
                 osc_message = osc_message.build()
                 client.send(osc_message)                
                 
-        for i in range(joystick4.get_numbuttons()):
-            if joystick4.get_button(i):
-                # Create an OSC message
-                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P4")
-                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
-                osc_message = osc_message.build()
-
-                # Send the OSC message
-                client.send(osc_message)
-                
+        if p4_last_btn >= 0 and joystick4.get_button(p4_last_btn) == 1:
+            pass
+        else:
+            p4_last_btn = -1
+            for i in range(joystick4.get_numbuttons()):
+                if joystick4.get_button(i) == 1:
+                    osc_message = osc_message_builder.OscMessageBuilder(address="/button/P4")
+                    osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                    osc_message = osc_message.build()
+                    client.send(osc_message)
+                    p4_last_btn = i
+                    break
+                                
         for j in range(joystick4.get_numaxes()):
             axis_value = joystick4.get_axis(j)
             if abs(axis_value) > 0.1:  # Deadzone filtering
