@@ -59,16 +59,26 @@ else:
     exit()
 
 # Main loop to process joystick inputs
+
+p1_last_btn = -1
 try:
     while True:
         pygame.event.pump()  # Update internal state
-        for i in range(joystick1.get_numbuttons()):
-            if joystick1.get_button(i):
-                # Create an OSC message
-                osc_message = osc_message_builder.OscMessageBuilder(address="/button/P1")
-                osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
-                osc_message = osc_message.build()
-                client.send(osc_message)
+        
+        if p1_last_btn >= 0 and joystick1.get_button(p1_last_btn) == 1:
+            pass
+        else:
+            p1_last_btn = -1
+            for i in range(joystick1.get_numbuttons()):
+                if joystick1.get_button(i) == 1:
+                    osc_message = osc_message_builder.OscMessageBuilder(address="/button/P1")
+                    osc_message.add_arg(f"{btn_map[i]}")  # Add button index as an argument
+                    osc_message = osc_message.build()
+                    print(osc_message.address, osc_message.params)
+                    client.send(osc_message)
+                    p1_last_btn = i
+                    break
+
             # Handle joystick axes
         for j in range(joystick1.get_numaxes()):
             axis_value = joystick1.get_axis(j)
