@@ -1,5 +1,5 @@
 var characters = ["Swordy", "Link", "Mario", "Spacey", "Tanks", "Cartoons", "Electric", "Magic"]
-var samples = ["A.wav", "A1.wav", "A2.wav", "A3.wav", "B.wav", "Start.wav", "R.wav", "L.wav", "Z.wav", "Mash.wav"]
+var samples = ["A.wav", "A1.wav", "A2.wav", "A3.wav", "A4.wav", "B.wav", "B1.wav", "B2.wav", "B3.wav", "B4.wav", "R.wav", "L.wav", "Z.wav", "Mash.wav"]
 
 inlets = 1;
 outlets = samples.length;
