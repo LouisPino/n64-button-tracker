@@ -1,6 +1,5 @@
 import pygame
-import time
-import socket
+# import socket
 from pythonosc import udp_client
 from pythonosc import osc_message_builder
 
@@ -11,12 +10,11 @@ port = 5007  # Port number
 client = udp_client.SimpleUDPClient(ip, port)
 
 
-# Create a socket for UDP
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+# # Create a socket for UDP
+# sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# Bind the socket to the address and port
-
-sock.setblocking(0)
+# # Bind the socket to the address and port
+# sock.setblocking(0)
 
 btn_map = {
     0: "A",
